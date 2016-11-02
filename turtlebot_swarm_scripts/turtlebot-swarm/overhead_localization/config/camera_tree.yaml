@@ -1,0 +1,10 @@
+camera_tree: 
+ - id: 100
+   parent: blue_camera 
+   child: yellow_camera
+ - id: 101
+   parent: yellow_camera 
+   child: green_camera
+ - id: 102
+   parent: green_camera
+   child: red_camera

@@ -1,0 +1,7 @@
+display:           Auto LED Teleop
+description:       Drive turtlebot with odometry and show status on blinkstick.
+compatibility:     rocon:/turtlebot
+launch:            auto_led_teleop.launch
+icon:              '' 
+public_interface:  auto_led_teleop.interface
+public_parameters: auto_led_teleop.parameters

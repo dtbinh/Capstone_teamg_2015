@@ -1,0 +1,29 @@
+<launch>
+  <arg name="camera_tree_yaml" default="$(find overhead_localization)/config/camera_tree.yaml"/>
+
+  <!-- Warning: Verify that the video devices match the cameras! -->
+  <include file="$(find overhead_localization)/launch/camera.launch">
+    <arg name="camera_name" value="red_camera"/> 
+    <arg name="video_device" value="/dev/video0"/>
+    <arg name="show_tag_detections" value="true"/>
+  </include>
+  <include file="$(find overhead_localization)/launch/camera.launch">
+    <arg name="camera_name" value="green_camera"/> 
+    <arg name="video_device" value="/dev/video3"/>
+    <arg name="show_tag_detections" value="true"/>
+  </include>
+  <include file="$(find overhead_localization)/launch/camera.launch">
+    <arg name="camera_name" value="yellow_camera"/> 
+    <arg name="video_device" value="/dev/video1"/>
+    <arg name="show_tag_detections" value="true"/>
+  </include>
+  <include file="$(find overhead_localization)/launch/camera.launch">
+    <arg name="camera_name" value="blue_camera"/> 
+    <arg name="video_device" value="/dev/video2"/>
+    <arg name="show_tag_detections" value="true"/>
+  </include>
+
+  <node pkg="overhead_localization" type="overhead_localization_node" name="overhead_localization" output="screen">
+    <rosparam command="load" file="$(arg camera_tree_yaml)"/>
+  </node>
+</launch>

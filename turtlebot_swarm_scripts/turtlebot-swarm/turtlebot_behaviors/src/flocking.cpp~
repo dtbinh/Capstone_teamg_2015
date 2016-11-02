@@ -1,0 +1,87 @@
+
+#include <ros/ros.h>
+
+#include <iostream>
+#include <map>
+
+#include <boost/foreach.hpp>
+
+#include <boost/algorithm/clamp.hpp>
+#include <boost/range/adaptor/map.hpp>
+
+#include <Eigen/Core>
+#include <Eigen/Geometry>
+
+#include <angles/angles.h>
+
+#include <eigen_conversions/eigen_msg.h>
+
+#include <geometry_msgs/Twist.h>
+#include <geometry_msgs/Pose.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
+
+#include "turtlebot_behaviors/turtlebot_behaviors.h"
+
+namespace turtlebot_behaviors {
+
+namespace { 
+
+const double R_REPEL = 0.75;
+const double R_ALIGN = 1.25;
+const double R_ATTRACT = 3.0;
+
+const double GAIN_LINEAR = 0.15;
+const double GAIN_ANGULAR = 1.0;
+const double DEFAULT_LINEAR_VELOCITY = 0.1;
+const double TARGET_ANGULAR_RANGE = M_PI/36.0;
+const double MAX_LINEAR_VELOCITY = 0.25;
+
+}
+
+void flockingUpdate(int rid)
+{
+  Eigen::Vector3d position = poses[rid].translation();
+  Eigen::Vector3d bearing = poses[rid].rotation() * Eigen::Vector3d::UnitX();
+  double yaw = std::atan2(bearing.y(), bearing.x());
+  ROS_DEBUG("robot %d: %lf %lf %lf\n", rid, position.x(), position.y(), yaw);
+  
+  Eigen::Vector3d target_displacement = Eigen::Vector3d::Zero();
+  double yaw_difference = 0.0;
+  int neighbors = 0;
+  BOOST_FOREACH(const int i, robot_ids | boost::adaptors::map_values) {
+    if (i == rid) { continue; }
+    Eigen::Vector3d d = poses[i].translation() - poses[rid].translation();
+    if (d.norm() < R_ATTRACT) {
+      Eigen::Vector3d target_bearing = bearing;
+      target_bearing = (d.norm() < R_ALIGN)
+                     ? poses[i].rotation() * Eigen::Vector3d::UnitX()
+                     : d.normalized();
+      double target_yaw = std::atan2(target_bearing.y(), target_bearing.x());
+      yaw_difference += angles::shortest_angular_distance(yaw, target_yaw);
+      target_displacement += (d.norm() < R_REPEL) ? -d/d.squaredNorm() : d;
+      neighbors++;
+    }
+  }
+  if (neighbors > 0) {
+    target_displacement /= neighbors;
+    yaw_difference = angles::normalize_angle(yaw_difference / neighbors);
+  }
+
+  double w = GAIN_ANGULAR * yaw_difference;
+  double v = (std::abs(yaw_difference) < TARGET_ANGULAR_RANGE) 
+           ? DEFAULT_LINEAR_VELOCITY
+           : GAIN_LINEAR * target_displacement.dot(bearing);
+  v = boost::algorithm::clamp(v, -MAX_LINEAR_VELOCITY, MAX_LINEAR_VELOCITY);
+  
+  publishCommand(rid, v, w);
+}
+
+void flocking()
+{
+  BOOST_FOREACH(const int rid, robot_ids | boost::adaptors::map_values) {
+    flockingUpdate(rid);
+  }
+}
+
+} 
+

@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="turtlebot_behaviors" type="swarm_controller" name="swarm_controller" output="screen">
+    <rosparam command="load" file="$(find turtlebot_behaviors)/config/robot_ids.yaml" />
+  </node>
+</launch>
