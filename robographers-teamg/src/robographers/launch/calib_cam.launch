@@ -1,0 +1,11 @@
+<launch>
+
+<param name="/usb_cam/pixel_format" value="yuyv"/>
+
+	<node pkg="usb_cam" name="usb_cam" type="usb_cam_node">
+<param name="video_device" value="/dev/video1" />
+    <param name="camera_frame_id" value="usb_cam" />
+</node>
+
+	
+</launch>

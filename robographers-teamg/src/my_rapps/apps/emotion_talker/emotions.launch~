@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find robographers)/launch/april_tag_usb.launch"/>
+</launch>
+

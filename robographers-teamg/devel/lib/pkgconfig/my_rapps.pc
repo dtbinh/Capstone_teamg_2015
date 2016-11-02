@@ -1,0 +1,8 @@
+prefix=/home/gauri/mrsd_project/robographers_teamg/devel
+
+Name: my_rapps
+Description: Description of my_rapps
+Version: 0.7.13
+Cflags: 
+Libs: -L/home/gauri/mrsd_project/robographers_teamg/devel/lib 
+Requires: 

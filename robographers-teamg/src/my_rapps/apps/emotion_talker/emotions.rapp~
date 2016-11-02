@@ -1,0 +1,6 @@
+display: Robographers
+description: Multipple Robots Capturing Faces and Expressions Collaboratively
+compatibility: rocon:/
+launch: robographers.launch
+public_interface: robographers.interface
+icon: robo.png

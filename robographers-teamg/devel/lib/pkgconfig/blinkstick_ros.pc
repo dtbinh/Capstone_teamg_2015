@@ -1,0 +1,8 @@
+prefix=/home/gauri/mrsd_project/robographers_teamg/devel
+
+Name: blinkstick_ros
+Description: Description of blinkstick_ros
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/gauri/mrsd_project/robographers_teamg/devel/lib 
+Requires: roscpp rospy std_msgs

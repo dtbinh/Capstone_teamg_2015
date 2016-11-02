@@ -1,0 +1,10 @@
+\subsubsection usage Usage
+\verbatim
+<node name="intraface" pkg="intraface" type="intraface">
+  <param name="delay_landmarks" type="double" value="0.0" />
+  <param name="delay_face_rot" type="double" value="0.0" />
+  <param name="delay_irisgaze" type="double" value="0.0" />
+  <param name="delay_emotions" type="double" value="0.0" />
+</node>
+\endverbatim
+

@@ -1,0 +1,27 @@
+#include <ros/ros.h>
+#include <image_transport/image_transport.h>
+#include <sensor_msgs/Image.h>
+#include <opencv2/highgui/highgui.hpp>
+#include <cv_bridge/cv_bridge.h>
+
+/// Object to store the new received image
+cv_bridge::CvImagePtr raw_frame;
+
+/// Has a new image arrived?
+bool new_image = false;
+
+//! Image subscriber callback
+/*!
+  \param msg Image pointer
+  */
+void imageCb(const sensor_msgs::ImageConstPtr& msg)
+{
+    try {
+	raw_frame =
+	    cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+    } catch (cv_bridge::Exception& e) {
+	ROS_ERROR("cv_bridge exception: %s", e.what());
+	return;
+    }
+    new_image = true;
+}

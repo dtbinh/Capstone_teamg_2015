@@ -1,0 +1,8 @@
+prefix=/home/gauri/mrsd_project/robographers_teamg/devel
+
+Name: intraface
+Description: Description of intraface
+Version: 0.0.0
+Cflags: -I/home/gauri/mrsd_project/robographers_teamg/devel/include -I/usr/include
+Libs: -L/home/gauri/mrsd_project/robographers_teamg/devel/lib -l:/usr/lib/x86_64-linux-gnu/libtinyxml.so
+Requires: cv_bridge image_transport roscpp sensor_msgs std_msgs message_runtime geometry_msgs eigen_conversions

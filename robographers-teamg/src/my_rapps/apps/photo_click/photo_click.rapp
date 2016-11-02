@@ -1,0 +1,7 @@
+display: Robographers
+description: Multiple Robots Capturing Faces and Expressions Collaboratively
+compatibility: rocon:/turtlebot
+launch: photo_click.launch
+public_interface: photo_click.interface
+public_parameters: photo_click.parameters
+icon: ''

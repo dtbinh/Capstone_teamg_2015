@@ -1,0 +1,5 @@
+<!--node pkg="image_view" name="image_view" type="image_view" args="image:=/usb_cam/image_raw"/-->
+<!--node pkg="camera_calibration" name="camera_calibration" type="cameracalibrator.py" args="--size 8x6 --square 0.026 image:=/usb_cam/image_raw camera:=/usb_cam"-->
+<!--/node--> 
+<!--param name="size" value="8x6"-->
+<!--param name="square" value="0.026"-->

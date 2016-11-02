@@ -1,0 +1,6 @@
+set(my_rapps_SETUP_PY_VERSION "0.7.13")
+set(my_rapps_SETUP_PY_SCRIPTS "")
+set(my_rapps_SETUP_PY_PACKAGES "my_rapps")
+set(my_rapps_SETUP_PY_PACKAGE_DIRS "src/my_rapps")
+set(my_rapps_SETUP_PY_MODULES "")
+set(my_rapps_SETUP_PY_MODULE_DIRS "")

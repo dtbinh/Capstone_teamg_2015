@@ -1,0 +1,6 @@
+<launch>
+	<arg name="application_namespace"/>
+	<node name="emotion_listener" pkg="intraface" type="emotion_listener" required="true"/>
+	<remap from="emotion_chatter" to="/emotion_chatter"/>
+</launch>
+

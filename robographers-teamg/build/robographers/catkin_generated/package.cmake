@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robographers")
+set(robographers_MAINTAINER "gauri <gauri@andrew.cmu.edu>")
+set(robographers_DEPRECATED "")
+set(robographers_VERSION "0.0.0")
+set(robographers_BUILD_DEPENDS "roscpp" "sensor_msgs" "geometry_msgs" "cv_bridge" "image_transport" "message_generation")
+set(robographers_RUN_DEPENDS "roscpp" "sensor_msgs" "geometry_msgs" "cv_bridge" "image_transport" "message_runtime")
+set(robographers_BUILDTOOL_DEPENDS "catkin")

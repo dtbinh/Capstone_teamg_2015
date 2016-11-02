@@ -1,0 +1,32 @@
+<package>
+  <name>my_rapps</name>
+  <version>0.7.13</version>
+  <description>
+    Core rocon apps for use with the appmanager and rocon concert.
+  </description>
+  <maintainer email="gandhigauri94@gmail.com">Gauri Gandhi</maintainer>
+
+  <license>BSD</license>
+  
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gateway_msgs</run_depend>
+  <run_depend>rocon_app_manager_msgs</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>rospy_tutorials</run_depend>
+  <run_depend>topic_tools</run_depend>
+  <run_depend>intraface</run_depend>
+
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+    
+    <rocon_app>apps/talker/talker.rapp</rocon_app>
+   
+    <rocon_app>apps/emotion_talker/emotion_talker.rapp</rocon_app>
+    <rocon_app>apps/emotion_listener/emotion_listener.rapp</rocon_app>
+    <rocon_app>apps/photo_click/photo_click.rapp</rocon_app>
+    
+  </export>
+</package>

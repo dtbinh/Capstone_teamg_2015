@@ -1,0 +1,6 @@
+display: Robographers
+description: Multipple Robots Capturing Faces and Expressions Collaboratively
+compatibility: rocon:/
+launch: emotion_listener.launch
+public_interface: emotion_listener.interface
+icon: robo.png

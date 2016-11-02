@@ -1,0 +1,8 @@
+prefix=/home/gauri/mrsd_project/robographers_teamg/devel
+
+Name: sound_play
+Description: Description of sound_play
+Version: 0.2.7
+Cflags: -I/home/gauri/mrsd_project/robographers_teamg/devel/include -I/home/gauri/mrsd_project/robographers_teamg/src/sound_play/include
+Libs: -L/home/gauri/mrsd_project/robographers_teamg/devel/lib 
+Requires: message_runtime actionlib_msgs

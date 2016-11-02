@@ -1,0 +1,12 @@
+<launch>
+	<arg name="application_namespace"/>
+	<node name="emotion_talker" pkg="intraface" type="emotion_talker" required="true">
+		<remap from="emotion_chatter" to="/emotion_chatter"/>
+	</node>
+	<node name="photoclick" pkg="intraface" type="photoclick" required="true">
+	</node>
+	<node name="headpose_talker" pkg="intraface" type="headpose_talker" required="true">
+		<remap from="theta_y" to="/theta_y"/>
+	</node>	
+</launch>
+

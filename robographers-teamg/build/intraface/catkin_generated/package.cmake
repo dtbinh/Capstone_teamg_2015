@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "intraface")
+set(intraface_MAINTAINER "albert <albert@todo.todo>")
+set(intraface_DEPRECATED "")
+set(intraface_VERSION "0.0.0")
+set(intraface_BUILD_DEPENDS "cv_bridge" "image_transport" "roscpp" "sensor_msgs" "std_msgs" "geometry_msgs" "message_runtime" "tinyxml" "cmake_modules" "eigen_conversions")
+set(intraface_RUN_DEPENDS "cv_bridge" "image_transport" "roscpp" "sensor_msgs" "std_msgs" "geometry_msgs" "message_runtime" "tinyxml" "eigen_conversions")
+set(intraface_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,9 @@
+<launch>
+	<arg name="application_namespace"/>
+	<include file="$(find robographers)/launch/april_tag_usb.launch"/>
+	
+	<node name="emotion_talker" pkg="intraface" type="emotion_talker" required="true">
+		<remap from="emotion_chatter" to="/emotion_chatter"/>
+	</node>
+</launch>
+

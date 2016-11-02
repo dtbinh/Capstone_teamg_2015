@@ -1,0 +1,7 @@
+publishers: []
+subscribers:
+   - name: /emotion_chatter
+     type: std_msgs/Float32
+services: []
+action_clients: []
+action_servers: []

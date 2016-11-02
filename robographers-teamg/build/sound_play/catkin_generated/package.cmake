@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "sound_play")
+set(sound_play_MAINTAINER "Austin Hendrix <namniart@gmail.com>")
+set(sound_play_DEPRECATED "")
+set(sound_play_VERSION "0.2.7")
+set(sound_play_BUILD_DEPENDS "roscpp" "roslib" "actionlib_msgs" "actionlib" "audio_common_msgs" "diagnostic_msgs" "message_generation")
+set(sound_play_RUN_DEPENDS "roscpp" "roslib" "actionlib_msgs" "audio_common_msgs" "diagnostic_msgs" "python-gi" "gir1.2-gstreamer-1.0" "gir1.2-gst-plugins-base-1.0" "gstreamer1.0-plugins-ugly" "gstreamer1.0-plugins-good" "rospy" "festival" "message_runtime")
+set(sound_play_BUILDTOOL_DEPENDS "catkin")

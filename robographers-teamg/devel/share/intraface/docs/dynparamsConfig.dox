@@ -1,0 +1,9 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~delay_landmarks" : \b [double] Delay between landmarks executions min: 0.0, default: 0.0, max: 100.0
+- \b "~delay_face_rot" : \b [double] Delay between face rotation executions min: 0.0, default: 0.0, max: 100.0
+- \b "~delay_irisgaze" : \b [double] Delay between irisgaze executions min: 0.0, default: 0.0, max: 100.0
+- \b "~delay_emotions" : \b [double] Delay between emotions executions min: 0.0, default: 0.0, max: 100.0
+

@@ -1,0 +1,8 @@
+publishers: 
+  - name: /intraface/emotions
+    type: intraface/Emotions
+subscribers: []
+
+services: []
+action_clients: []
+action_servers: []

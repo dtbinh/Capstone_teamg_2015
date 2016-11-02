@@ -1,0 +1,2 @@
+intraface:my_rapps:robographers:sound_play
+-DCATKIN_DEVEL_PREFIX=/home/gauri/mrsd_project/robographers_teamg/devel -DCMAKE_INSTALL_PREFIX=/home/gauri/mrsd_project/robographers_teamg/install -G Unix Makefiles

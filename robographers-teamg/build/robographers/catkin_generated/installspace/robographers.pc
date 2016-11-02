@@ -1,0 +1,8 @@
+prefix=/home/gauri/mrsd_project/robographers_teamg/install
+
+Name: robographers
+Description: Description of robographers
+Version: 0.0.0
+Cflags: -I/home/gauri/mrsd_project/robographers_teamg/install/include
+Libs: -L/home/gauri/mrsd_project/robographers_teamg/install/lib 
+Requires: roscpp sensor_msgs message_runtime

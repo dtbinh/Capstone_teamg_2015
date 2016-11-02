@@ -1,0 +1,11 @@
+publishers: 
+  - name: /emotion_chatter
+    type: std_msgs/Float32
+  - name: /theta_y
+    type: std_msgs/Float32
+subscribers:
+  - name: /flag
+    type: std_msgs/Int8
+services: []
+action_clients: []
+action_servers: []

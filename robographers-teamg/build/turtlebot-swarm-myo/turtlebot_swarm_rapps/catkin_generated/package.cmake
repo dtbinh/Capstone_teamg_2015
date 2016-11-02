@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "turtlebot_swarm_rapps")
+set(turtlebot_swarm_rapps_MAINTAINER "sasanka <sasanka@todo.todo>")
+set(turtlebot_swarm_rapps_DEPRECATED "")
+set(turtlebot_swarm_rapps_VERSION "0.0.0")
+set(turtlebot_swarm_rapps_BUILD_DEPENDS )
+set(turtlebot_swarm_rapps_RUN_DEPENDS "blinkstick_ros" "nodelet" "rocon_python_utils" "topic_tools" "turtlebot_bringup" "yocs_velocity_smoother")
+set(turtlebot_swarm_rapps_BUILDTOOL_DEPENDS "catkin")

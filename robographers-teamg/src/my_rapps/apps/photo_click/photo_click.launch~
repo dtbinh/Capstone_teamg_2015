@@ -1,0 +1,9 @@
+<launch>
+	<arg name="application_namespace"/>
+	<node name="emotion_talker" pkg="intraface" type="emotion_talker" required="true">
+		<remap from="emotion_chatter" to="/emotion_chatter"/>
+	</node>
+	<node name="photoclick" pkg="intraface" type="photoclick" required="true">
+	</node>
+</launch>
+
