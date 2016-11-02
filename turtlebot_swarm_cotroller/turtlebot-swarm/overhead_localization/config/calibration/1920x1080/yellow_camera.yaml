@@ -1,0 +1,20 @@
+image_width: 1920
+image_height: 1080
+camera_name: yellow_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [678.2679889434727, 0, 931.7638281277631, 0, 677.877500319972, 494.6037648253719, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.03626623448377346, -0.007107642641077483, 0.004365334802626198, 0.004596930071301047, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [572.1478271484375, 0, 953.9080296664179, 0, 0, 659.5593872070312, 497.4108221572606, 0, 0, 0, 1, 0]

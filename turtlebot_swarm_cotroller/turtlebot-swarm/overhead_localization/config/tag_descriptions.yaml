@@ -1,0 +1,23 @@
+tag_descriptions: [
+ # Turtlebot IDs
+ {id: 0, size: 0.211605},
+ {id: 1, size: 0.211605},
+ {id: 2, size: 0.211605},
+ {id: 3, size: 0.211605},
+ {id: 4, size: 0.211605},
+ {id: 5, size: 0.211605},
+ {id: 6, size: 0.211605},
+ {id: 7, size: 0.211605},
+ {id: 8, size: 0.211605},
+ {id: 9, size: 0.211605},
+ 
+ {id: 10, size: 0.211605},
+ {id: 11, size: 0.211605},
+ {id: 12, size: 0.211605},
+ {id: 13, size: 0.211605},
+
+ # Camera calibration
+ {id: 100, size: 0.211605},
+ {id: 101, size: 0.211605},
+ {id: 102, size: 0.211605},
+ {id: 103, size: 0.211605}]

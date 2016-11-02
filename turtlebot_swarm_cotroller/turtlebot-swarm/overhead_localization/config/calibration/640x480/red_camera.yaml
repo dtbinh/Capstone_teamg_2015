@@ -1,0 +1,20 @@
+image_width: 640
+image_height: 480
+camera_name: red_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [291.9454907243251, 0, 295.421612446332, 0, 291.4730095692951, 213.4859793091455, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.02782920687594694, -0.01206833026817843, 0.0006392208661818799, -0.0002038432606484765, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [272.6615295410156, 0, 289.3188103874854, 0, 0, 282.7677307128906, 211.5845129142672, 0, 0, 0, 1, 0]

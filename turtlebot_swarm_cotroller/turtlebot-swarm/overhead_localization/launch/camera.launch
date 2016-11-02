@@ -1,0 +1,27 @@
+<launch>
+  <arg name="camera_name" default="head_camera"/> 
+  <arg name="camera_frame_id" default="$(arg camera_name)"/>
+  <arg name="camera_parameters" default="$(find overhead_localization)/config/$(arg camera_name)_parameters.yaml"/> 
+  <arg name="video_device" default="/dev/video0"/>
+  <arg name="tag_descriptions_yaml" default="$(find overhead_localization)/config/tag_descriptions.yaml"/>
+  <arg name="show_tag_detections" default="false"/>
+
+  <group ns="$(arg camera_name)">
+    <node pkg="usb_cam" type="usb_cam_node" name="usb_cam" output="screen">
+      <param name="video_device" value="$(arg video_device)"/>
+      <param name="camera_name" value="$(arg camera_name)"/>
+      <param name="camera_frame_id" value="$(arg camera_frame_id)"/>
+      <rosparam command="load" file="$(arg camera_parameters)"/>
+    </node>
+    <node pkg="apriltags_ros" type="apriltag_detector_node" name="apriltag_detector" output="screen">
+      <remap from="camera_info" to="usb_cam/camera_info"/>
+      <remap from="image_rect" to="usb_cam/image_raw"/>
+      <rosparam command="load" file="$(arg tag_descriptions_yaml)"/>
+    </node>
+    <group if="$(arg show_tag_detections)">
+      <node pkg="image_view" type="image_view" name="image_view">
+        <remap from="image" to="tag_detections_image"/>
+      </node>
+    </group>
+  </group> 
+</launch>

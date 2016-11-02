@@ -1,0 +1,20 @@
+image_width: 1920
+image_height: 1080
+camera_name: green_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [684.0230552580688, 0, 893.8830069929153, 0, 683.4508045496974, 541.3989789333853, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.04864863674333443, -0.002211629236701071, 0.0007602761977608226, 0.001853572410706122, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [579.4439086914062, 0, 869.1517717173847, 0, 0, 659.8278198242188, 542.1325231820156, 0, 0, 0, 1, 0]

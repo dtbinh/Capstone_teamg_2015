@@ -1,0 +1,20 @@
+image_width: 640
+image_height: 480
+camera_name: blue_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [304.9648849561937, 0, 325.2400304054542, 0, 304.5025765263897, 230.912212204339, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.01976809034904344, -0.01795256594626908, 0.001333785542099036, -0.003053664332378266, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [289.0142822265625, 0, 321.680830549376, 0, 0, 297.7489624023438, 230.7182228402053, 0, 0, 0, 1, 0]

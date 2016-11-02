@@ -1,0 +1,9 @@
+# These specify the public parameters and their default values. These
+# should also be reflected as args with their respective defaults in the launcher.
+# The app manager checks against these and denies/accepts incoming parameters
+# received when calling the start_rapp service. They also get used as idl info
+# for the rapp.
+#
+# Note: it is easier and more reliable to have them set here in yaml than have to parse
+# and extract information from arg tags in the launcher.
+#

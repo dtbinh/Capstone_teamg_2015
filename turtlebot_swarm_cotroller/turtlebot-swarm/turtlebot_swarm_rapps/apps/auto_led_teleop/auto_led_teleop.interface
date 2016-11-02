@@ -1,0 +1,11 @@
+publishers:
+  - name: /teleop/odom_combined
+    type: geometry_msgs/PoseWithCovarianceStamped
+subscribers:
+  - name: /teleop/cmd_vel
+    type: geometry_msgs/Twist
+  - name: /teleop/css_color
+    type: std_msgs/String
+services: []
+action_clients: []
+action_servers: []
